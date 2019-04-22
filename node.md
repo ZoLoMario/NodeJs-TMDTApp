@@ -88,3 +88,6 @@ tác dụng của file package.json trong ứng dụng node sử dụng để ch
 
 phân tích tích thư viện upload file và dịch sang tiếng việt để sử dụng
 phân tích tích thư viện upload file và dịch sang tiếng việt để sử dụng
+
+22/04/2019 21h23
+su dung ssh de dung dang hap tu dong
