@@ -1,0 +1,70 @@
+Đặc tả phần mềm thương mại điện tử 
+Đặc tả về cơ sở dữ liệu 
+Cơ sở dữ liệu gồm 3 phần cơ sở dữ liệu là nhà cung cấp, khách hàng, sản phẩm, dữ liệu tương tác 
+1.Nhà cũngcấp có 
+Hình ảnh 
+Đại diện
+Tên, tuổi 
+Địa chỉ 
+Giới tính 
+Sdt, mail 
+Mặt hàng 
+Id 
+Cmt 
+Tổ chức 
+Loại hình bán hàng 
+Trạng thái hoạt động 
+Thông tin thành toán 
+Hoạt động giao dịch  
+Cách thức thanh toán 
+Mức độ uy tín 
+2.Khách hàng 
+Hình ảnh 
+Đại diện 
+Tên, họ 
+Ngày tháng năm sinh 
+Thông tin liên hệ 
+Địa chỉ giao nhận hàng 
+Địa chỉ hoá đơn 
+Lịch sử đơn hàng 
+Trạng thái đơn hàng 
+Id 
+Bạn bè 
+Thông tin liên hệ 
+Tình trạng hoạt động 
+Mức độ uy tín 
+Thông tin thành toán 
+Cách thức thanh toán 
+Hoạt động giao dịch 
+Tương tác phản hồi, nhận xét của khách hàng 
+Đánh giá 
+3.Sản phẩm 
+Tên sản phẩm 
+Loại sản phẩm 
+Giá 
+Nhà sản xuất 
+Nhà cũng cấp 
+Hình ảnh 
+3d 
+Id 
+Mô tả sản phẩm 
+Tình trạng sản phẩm 
+Lựa chọn 
+Số lượng 
+Số seri 
+Mã qr,br,truy xuất nguồn gốc 
+Chứng nhận 
+Khối lượng 
+Kích thước 
+Hoa hồng 
+Chị phí 
+Nhận xét, Đánh gía về sản phẩm
+4.Thông tin tương tác 
+Địa chỉ IP 
+Thông tin người đăng nhập 
+Quá trình giao dịch 
+Quá trình mua hàng 
+Thông tin xem hàn 
+Địa chỉ dò từ IP 
+Thông tin trình duyệt, hệ điều hành 
+Quá trình sử dụng app hay web 

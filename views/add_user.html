@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Trang nhập thông tin cho người dùng</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <form id="form-user" method="POST" accept-charset="utf-8">
+            <h1> Xin mời bạn nhập thông tin vào dưới dây !</h1>
+            <label>Tên người dùng</label><br>
+            <input id="name-user" name="user[name]" class="form-control"><br>
+            <label>Ngày sinh</label><br>
+            <input id="date-birday-user" name="user[datebirday]" type="date" class="form-control"><br>
+            <label>Email của bạn</label><br>
+            <input id="email-user" name="user[email]" type="email" placeholder="name@example.com" class="form-control"><br>
+            <button type="submit" class="btn">Đăng kí</button>
+        </form>
+        <script src="bootstrap/js/bootstrap.min.js"/>
+    </body>
+</html>
