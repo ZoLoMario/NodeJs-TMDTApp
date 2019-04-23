@@ -47,7 +47,7 @@ router.route('/provider')
                     })
     .post(function(req,res){
     try {
-        fs.appendFileSync(path+'/data-req.txt',
+        fs.appendFileSync(patha +'/data-req.txt',
                           CirJSON.stringify(req),
                           {flags:'a',encoding:'utf-8'}
                           )}
@@ -64,7 +64,7 @@ router.route('/provider')
         console.log('Bắt đầu upload file');
         })
     form.on('file',function(name, file){
-        console.log('Uploaded ', file , name);
+        console.log('Uploaded '+ name);
         })
     form.on('end',function(){
         console.log('da ket thuc');
@@ -77,19 +77,18 @@ router.route('/provider')
     
     //trình phân tích cú pháp
     form.parse(req,function(err,fields,files){
-        var oldpath = files.provider.image.path;
-        console.log('oldpath ' + oldpath);
-        console.log('fields');
+        var tmppath = files.providerimage.path;
+        //console.log(tmppath);
+        console.log(files);
+        console.log('Duong dan oldpath ' + files.providerimage.path);
+        console.log(fields);
         console.log('files');
         console.log('hello');
         var newpath = path + '/uploads/' + files.name
-        form.emit('file ',files.file.size,files.file.name);
-        fs.rename(oldpath,newpath,function(err){
+        fs.rename(tmppath,newpath,function(err){
             if(err) throw err;
             });
         });
-    //console.log(form);
-   
     res.send(req.body);
     return;
     })

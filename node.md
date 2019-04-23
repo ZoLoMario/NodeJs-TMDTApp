@@ -94,3 +94,7 @@ su dung ssh de dung dang hap tu dong
 
 12h53 23/04/2019
 đổi thứ tự hàm sự kiện vì trình phân tích cú pháp chạy sau sẽ hoạt động phương án đổi như vậy không chạy được
+
+05h47 24/03/2018
+  - thêm thuộc tính ngoắc vuông đối tượng khi truyền dữ liệu
+  - chạy xem cấu trúc req. body file không nằm trong body
