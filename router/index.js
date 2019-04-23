@@ -55,27 +55,16 @@ router.route('/provider')
         console.log('loi ghi file POST tạo provider: '+ err);
         }
     console.log('kiem tra file log');
-    var form = new formidable.IncomingForm();
-    form.parse(req,function(err,fields,files){
-        var oldpath = files.provider.image.path;
-        console.log('oldpath ' + oldpath);
-        console.log('fields');
-        console.log('files');
-        console.log('path');
-        var newpath = path + '/uploads/' + files.name
-        fs.rename(oldpath,newpath,function(err){
-            if(err) throw err;
-            });
-        });
-        console.log(form);
-        
+    var form = new formidable.IncomingForm(),
+        file = [],
+        field = [];
         //sự kiện khi file bắt đầu upload sử dụng tạo hàm hàm on()
     form.on('fileBegin',function(name,file){
         file.path = path + '/uploads/' + file.name;
         console.log('Bắt đầu upload file');
         })
     form.on('file',function(name, file){
-        console.log('Uploaded ' + file.name);
+        console.log('Uploaded ', file , name);
         })
     form.on('end',function(){
         console.log('da ket thuc');
@@ -84,10 +73,24 @@ router.route('/provider')
         console.log('truong ten :',name);
         })
     console.log(form.eventNames());
-    console.log(form.file);
-    form.emit('fileBegin',form.file,form.file);
+    //console.log(file);
+    
+    //trình phân tích cú pháp
+    form.parse(req,function(err,fields,files){
+        var oldpath = files.provider.image.path;
+        console.log('oldpath ' + oldpath);
+        console.log('fields');
+        console.log('files');
+        console.log('hello');
+        var newpath = path + '/uploads/' + files.name
+        form.emit('file ',files.file.size,files.file.name);
+        fs.rename(oldpath,newpath,function(err){
+            if(err) throw err;
+            });
+        });
+    //console.log(form);
+   
     res.send(req.body);
     return;
-    
     })
 module.exports = router

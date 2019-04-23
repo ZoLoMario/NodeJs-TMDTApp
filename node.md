@@ -91,3 +91,6 @@ phân tích tích thư viện upload file và dịch sang tiếng việt để s
 
 22/04/2019 21h23
 su dung ssh de dung dang hap tu dong
+
+12h53 23/04/2019
+đổi thứ tự hàm sự kiện vì trình phân tích cú pháp chạy sau sẽ hoạt động phương án đổi như vậy không chạy được
